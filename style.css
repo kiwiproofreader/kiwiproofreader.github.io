@@ -1,0 +1,785 @@
+/* General */
+
+html,
+body,
+header,
+footer {
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-width: 300px;
+    /* room for fixed header when scrolled up */
+    padding-top: 60px; /* small-screen default */
+    
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: Verdana, Calibri, sans-serif;
+    font-size: 11pt;
+}
+
+h1 {
+    font-family: "Segoe WP", "Segoe UI Semilight", "Segoe UI", Tahoma, sans-serif;
+    color: #002D70;
+    font-size: 24pt;
+}
+
+h2 {
+    font-family: "Segoe UI", "Nirmala UI", sans-serif;
+    color: #114786;
+    font-size: 18pt;
+}
+
+h3 {
+    font-family: "Segoe UI", "Nirmala UI", sans-serif;
+    color: #114786;
+    font-size: 14pt;
+}
+
+a {
+    color: #0071BC;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+span.small-font {
+    display: inline-block;
+    font-size: 0.8em;
+}
+
+/* graphics */
+img.icon {
+    width: 48px;
+    height: 48px;
+}
+
+svg {
+    height: 100%;
+    width: 100%;
+}
+
+/* forms */
+form * {
+    display: block;
+    margin: 10px 0;
+    font-size: 90%;
+    font-family: Verdana, Calibri, sans-serif;
+}
+label {
+    margin-bottom: 2px;
+}
+input, textarea {
+    margin-top: 2px;
+    width: 100%;
+}
+textarea {
+    resize: vertical;
+}
+
+
+
+/* 'Contact Me Now! banner */
+
+.banner {
+    background: #340066;
+    color: #FFFFFF;
+    
+    padding: 1px 0;
+}
+.banner hr {
+    border-bottom-width: 2px;
+}
+
+/* table */
+.banner table {
+    margin: auto;
+}
+.banner table * {
+    padding: 0;
+    margin: 0;
+}
+.banner td {
+    padding: 0 4px;
+}
+
+.banner td.icon {
+    display: none; /* small-screen default */
+}
+
+/* h1, p, img */
+.banner h1,
+.banner p {
+    text-align: center; /* small-screen default */
+}
+
+.banner p {
+    margin-bottom: 8px;
+}
+.banner p a {
+    color: #9BD5FF;
+}
+
+.banner h1 a {
+    color: #FFFFFF;
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+.banner h1 a:hover {
+    color: #9BD5FF;
+    text-decoration: none;
+}
+
+.banner img {
+    transition-property: filter, -webkit-filter;
+    transition-duration: 0.3s;
+}
+.banner img:hover {
+    -webkit-filter: brightness(120%);
+    filter: brightness(120%);
+}
+
+
+/* background hero image */
+
+#hero-image {
+    height: 300px;
+    background: #b9cae5;
+    
+    /* crop image to fit */
+    overflow: hidden;
+    
+    /* for absolute positioning of children */
+    position: relative;
+}
+#hero-image img {
+    /* scale image from centre */
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    
+    width: 1024px;
+    min-width: 100%;
+}
+
+/* positioning of text over image */
+#hero-image p {
+    position: absolute;
+    top: 0;
+    
+    font-size: 3rem;
+    /*text-shadow: -1px 1px #999;*/
+}
+#hero-image .rough {
+    left: 5%;
+    
+    font-family: "Freestyle Script", cursive;
+}
+#hero-image .fancy {
+    right: 5%;
+    top: 56px; /* small-screen default */
+    
+    font-family: "Edwardian Script ITC", serif;
+}
+
+
+/* Header and Footer */
+
+header, footer {
+    height: 60px;
+    background-color: #FFE8DE;
+    
+    /* for positioning of child elements */
+    position: relative;
+}
+
+header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+
+    border-bottom: 2px solid rgb(150,150,150);
+    box-sizing: border-box;
+}
+header div.overlay {
+    visibility: visible; /* small-screen default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: #FFE8DE;
+}
+
+footer {
+    /* if content is smaller than viewport, expand footer to bottom of page */
+    box-shadow: 0px 500px 0px 500px #FFE8DE;
+}
+
+
+/* logo and name of company/website */
+
+#title {
+    position: absolute;
+    
+    width: 380px;
+    height: 44px;
+}
+
+#title div.polygon {
+    position: relative;
+    top: 0;
+    left: -285px; /* small-screen default */
+    width: 380px;
+    
+    transition: left 0.3s;
+}
+
+#title polygon {
+    fill: #9BD5FF;
+}
+
+/* company logo */
+#title div.icon {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    
+    width: 44px;
+    height: 44px;
+    
+    background: #9BD5FF;
+    transition: left 0.3s;
+}
+#title div.icon img {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    transition-property: filter, -webkit-filter;
+    transition-duration: 0.3s;
+}
+#title div.icon:hover img {
+    filter: brightness(150%);
+    -webkit-filter: brightness(150%);
+}
+
+/* title text */
+#title h1 {
+    opacity: 0; /* small-screen default */
+    position: absolute;
+    top: 0;
+    left: 65px;
+    width: 300px;
+    transform: translateY(-50%);
+    
+    color: #002D70;
+    transition-property: color, opacity, left;
+    transition-duration: 0.5s;
+}
+#title h1:hover {
+    color: #0071BC;
+}
+
+/* navigation links */
+
+nav {
+    /* for positioning of child elements */
+    position: absolute;
+}
+header nav {
+    bottom: 0; left: 0; right: 0;
+    padding: 10px 0;
+    width: 100%; /* small-screen default */
+    z-index: -2;
+
+    background-color: #FFE8DE;
+    border-bottom: 2px solid rgb(150,150,150); /* small-screen default */
+
+    transition: bottom 0.3s, margin-left 0.3s;
+}
+footer nav {
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+}
+
+/* parent group */
+
+nav>div {
+    position: relative;
+    float: left;
+    
+    height: 100%;
+    overflow: none;
+}
+header nav>div {
+    width: 100%; /* small-screen default */
+}
+footer nav>div {
+    bottom: 0;
+    width: 20%;
+}
+footer nav>div.icon {
+    width: 50%;
+}
+footer nav>div:not(.icon) {
+    display: none; /* remove normal page links because header is fixed */
+}
+
+nav a {
+    color: #114786;
+    font-family: "Segoe UI", "Nirmala UI", sans-serif;
+    font-size: 18pt;
+    
+    transition: color 0.3s, font-size 0.2s;
+}
+nav a:hover {
+    color: #0071BC;
+    text-decoration: none;
+}
+
+/* child group */
+
+/* text */
+nav div.text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    transition: top 0.1s;
+}
+header nav div.text {
+    top: 5px; /* small screen default */
+}
+footer nav div.text {
+    bottom: 7px;
+}
+
+/* polygons */
+nav .polygon {
+    height: 50px;
+    margin: 0px 10px;
+}
+
+nav .icon svg {
+    width: 64px;
+}
+
+nav polygon {
+    fill: #9BD5FF;
+    stroke: #9BD5FF;
+    stroke-width: 2;
+    fill-rule: nonzero;
+    
+    transition: fill 0.3s;
+}
+header nav polygon {
+    visibility: hidden; /* small-screen default */
+}
+header nav polygon.small {
+    visibility: visible; /* small-screen default */
+    position: absolute;
+    top: 0;
+}
+
+nav a:hover polygon {
+    fill: #E4EFFF;
+}
+
+/* social site links */
+nav div.icon img {
+    width: 36px;
+    height: 36px;
+    
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    transition-property: filter, -webkit-filter;
+    transition-duration: 0.3s;
+}
+nav div.icon:hover img {
+    filter: brightness(150%);
+    -webkit-filter: brightness(150%);
+}
+
+/* small-screen menu button */
+
+#menu-button,
+#menu-button ~ label {
+    visibility: visible;
+}
+#menu-button {
+    display: none;
+}
+
+#menu-button ~ label {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+}
+#menu-button ~ label img {
+    width: 100%;
+    height: 100%;
+    
+    transition-property: filter, -webkit-filter;
+    transition-duration: 0.3s;
+}
+#menu-button ~ label img:hover {
+    -webkit-filter: brightness(150%);
+    filter: brightness(150%);
+}
+
+#menu-button ~ label img.menu-close,
+#menu-button:checked ~ label img.menu-open {
+    display: none;
+}
+#menu-button:checked ~ label img.menu-close,
+#menu-button ~ label img.menu-open {
+    display: inline-block;
+}
+
+/* when menu is open */
+#menu-button:checked ~ nav {
+    bottom: -220px;
+}
+
+
+/* Section */
+
+section {
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+section polygon.small {
+    visibility: hidden;
+}
+
+/* centering section content */
+section>* {
+    width: 90%; /* small-screen default */
+    margin: 18px auto;
+    
+    transition: width 0.3s;
+}
+
+section p,
+section li {
+    text-align: justify;
+}
+section a:visited {
+    color: #550077;
+}
+
+/* headings */
+
+.heading {
+    width: 100%;
+    position: relative;
+    margin: 0 0 10px 0;
+    padding: 1px 0;
+}
+
+.heading .text {
+    width: 78%; /* small-screen default */
+    margin: auto;
+}
+.heading h1,
+.heading h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* polygons */
+.heading .polygon {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.heading polygon {
+    fill: #9BD5FF;
+    fill-rule: nonzero;
+}
+section polygon {
+    visibility: hidden; /* small-screen default */
+}
+section polygon.small {
+    visibility: visible; /* small-screen default */
+}
+
+section img {
+    display: block;
+    margin: auto;
+    
+    border: 2px solid #0071BC;
+    border-radius: 10px;
+}
+
+
+/* article (for blog) */
+
+section>article {
+    padding: 10px 15px 5px 15px;
+    margin: 30px auto;
+    width: 80%; /*small-screen default */
+    
+    border-radius: 20px;
+    background: #9BD5FF;
+    
+    /* for positioning of child elements */
+    position: relative;
+}
+section>article article {
+    border-top: 1px solid white;
+    margin: 20px 0;
+    padding: 0;
+}
+
+article.large-font p,
+article.large-font li {
+    font-size: 110%;
+}
+
+article img {
+    float: left;
+    width: 40%;
+    margin: 10px 20px 0 0;
+    border: 2px solid #E4EFFF;
+}
+
+article li {
+    margin: 10px 0 10px -15px;
+    padding-left: 10px;
+}
+article hr {
+    border: none;
+    margin: 30px 0 0 0;
+    border-bottom: 1px solid white;
+}
+
+/* headings */
+
+article h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+article h2 {
+    margin: 10px 0 0 0;
+    font-size: 1.2em;
+}
+article h3 {
+    margin: 10px 0 -10px 0;
+    font-size: 1em;
+}
+
+article span#date {
+    display: inline-block;
+    margin-top: 3px;
+    font-size: 1em;
+    font-weight: normal;
+    float: right;
+    font-family: "Segoe UI", "Nirmala UI", sans-serif;
+}
+article h2 span#date {
+    margin-top: 2px;
+}
+article h3 span#date {
+    margin-top: 0px;
+}
+
+
+/* Enlarged Screen Sizes */
+
+/* very small */
+@media only screen and (min-width: 410px) {
+    
+    /* 'Contact Me Now!' banner */
+    
+    .banner td.icon {
+        display: table-cell;
+    }
+    
+    .banner h1,
+    .banner p {
+        text-align: left;
+    }
+    
+    /* hero image */
+    #hero-image .fancy {
+        top: 0;
+    }
+}
+
+/* small */
+@media only screen and (min-width: 440px) {
+    
+    /* title (expanded) */
+    #title h1 {
+        opacity: 1;
+    }
+    #title div.polygon {
+        left: -15px;
+    }
+}
+
+
+/* medium-small */
+@media only screen and (min-width: 550px) {
+    
+    /* title (collapsed) */
+    #title {
+        z-index: -2;
+    }
+    #title h1 {
+        opacity: 0;
+    }
+    #title div.polygon {
+        left: -280px;
+    }
+    
+    /* expand header links */
+    
+    header div.overlay {
+        visibility: hidden;
+    }
+    
+    header nav {
+        left: auto; right: auto; width: auto;
+        margin-left: 105px;
+        
+        border-bottom: 0;
+        background: none;
+    }
+    header nav>div {
+        width: 25%;
+    }
+    
+    header nav div.text {
+        top: 8px;
+    }
+    nav a {
+        font-size: 14pt;
+    }
+    
+    header nav polygon {
+        visibility: visible;
+    }
+    header nav polygon.small {
+        visibility: hidden;
+    }
+    
+    /* menu button */
+    #menu-button,
+    #menu-button ~ label {
+        visibility: hidden;
+    }
+    #menu-button:checked ~ nav {
+        bottom: 0;
+    }
+}
+
+/* medium */
+@media only screen and (min-width: 680px) {
+    
+    /* title (collapsed) */
+    #title h1 {
+        left: 65px;
+    }
+    
+    /* expand footer links */
+    footer nav polygon {
+        visibility: visible;
+    }
+    footer nav polygon.small {
+        visibility: hidden;
+    }
+    
+    footer nav>div:not(.icon) {
+        display: block;
+    }
+    footer nav>div.icon {
+        width: 10%;
+    }
+    
+    /* header */
+    body {
+        padding-top: 0px;
+    }
+    header {
+        position: relative;
+        border-bottom: none;
+    }
+    
+    header nav div.text {
+        top: 3px;
+    }
+    nav a {
+        font-size: 18pt;
+    }
+    
+    /* section */
+    section>* {
+        width: 70%;
+    }
+    section>article {
+        width: 70%;
+    }
+    
+    section polygon {
+        visibility: visible;
+    }
+    section polygon.small {
+        visibility: hidden;
+    }
+    
+    .heading .text {
+        width: 38%;
+    }
+    
+}
+
+/* large */
+@media only screen and (min-width: 920px) {
+    
+    /* title (expanded) */
+    #title h1 {
+        opacity: 1;
+        left: 80px;
+    }
+    #title div.polygon {
+        left: 0;
+    }
+    #title div.icon {
+        left: 20px;
+    }
+    
+    /* nav */
+    header nav {
+        margin-left: 390px;
+    }
+    
+    /* section */
+    section>* {
+        width: 50%;
+    }
+    section>article {
+        width: 50%;
+    }
+}
+
+

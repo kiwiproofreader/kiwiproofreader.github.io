@@ -78,6 +78,11 @@ textarea {
     resize: vertical;
 }
 
+/* hide spambot input so only spambots can see it */
+input[name="_gotcha"] {
+    display: none;
+}
+
 
 
 /* 'Contact Me Now! banner */

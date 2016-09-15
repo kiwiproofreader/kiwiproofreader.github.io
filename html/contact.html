@@ -103,17 +103,21 @@
         </div>
         
         <!-- contact form -->
-        <h2>Warning! debug mode</h2>
-        <form method="POST" action="http://formspree.io/elijah.shadbolt@gmail.com">
+        <form method="POST" action="http://formspree.io/christina.shadbolt@gmail.com">
             <label>Name</label>
             <input type="text" name="firstname" placeholder="First name" required/>
             <input type="text" name="lastname" placeholder="Last name" required/>
             
             <label>Email address</label>
-            <input type="email" name="email" placeholder="Your email address" required/>
+            <input type="email" name="_replyto" placeholder="Your email address" required/>
+            
+            <input type="hidden" name="_subject" value="KiwiProofreader Contact"/>
             
             <label>Comment / Request</label>
             <textarea name="message" placeholder="Your message" required></textarea>
+            
+            <!-- to ignore spambots -->
+            <input type="text" name="_gotcha" style="display:none" />
             
             <button type="submit" title="Send to christina.shadbolt@gmail.com  via formspree.io">Send</button>
         </form>

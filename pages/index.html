@@ -1,10 +1,16 @@
 <!doctype html>
 <html>
 <head>
-    <title>Contact - KiwiProofreader</title>
+    <base href="../"/>
+    
+    <title>Home - KiwiProofreader</title>
     <link rel="icon" href="images/logo_kp.png"/>
+    
+    <meta name="description" content="Proofreading and editing excellence for academic students, website content, journalistic articles and more!"/>
+    
+    <meta name="keywords" content="proofread, edit, spellcheck, proof read, proofreader, editor, proofreading, editing"/>
 
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="pages/style.css"/>
 
     <meta charset="utf-8"/>
 </head>
@@ -13,7 +19,7 @@
     
     <header>
         <!-- website title and logo -->
-        <div id="title"><a href="index.html" title="Home">
+        <div id="title"><a href="pages/index.html" title="Home">
             <div class="polygon">
                 <svg height=50px preserveAspectRatio="none">
                     <polygon points="0,0 380,0 350,22 380,44 0,44" />
@@ -38,7 +44,7 @@
         
         <!-- header navigation bar -->
         <nav>
-            <div><a href="index.html" title="Home">
+            <div><a href="pages/index.html" title="Home">
                 <div class="polygon">
                     <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                         <polygon points="2,-2 98,-2 98,75 50,98 2,75"/>
@@ -48,7 +54,7 @@
                 <div class="text">HOME</div>
             </a></div>
             
-            <div><a href="pricing.html" title="Pricing">
+            <div><a href="pages/pricing.html" title="Pricing">
                 <div class="polygon">
                     <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                         <polygon points="2,-2 98,-2 98,75 50,98 2,75"/>
@@ -58,7 +64,7 @@
                 <div class="text">PRICING</div>
             </a></div>
             
-            <div><a href="contact.html" title="Contact">
+            <div><a href="pages/contact.html" title="Contact">
                 <div class="polygon">
                     <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                         <polygon points="2,-2 98,-2 98,75 50,98 2,75"/>
@@ -68,7 +74,7 @@
                 <div class="text">CONTACT</div>
             </a></div>
             
-            <div><a href="blog/blog.html" title="Blog">
+            <div><a href="pages/blog.html" title="Blog">
                 <div class="polygon">
                     <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                         <polygon points="2,-2 98,-2 98,75 50,98 2,75"/>
@@ -81,10 +87,40 @@
     </header>
     
     
+    <!-- 'Contact me Now!' banner -->
+    <div class="banner">
+        <hr/>
+        
+        <table>
+            <tr>
+                <td class="icon" rowspan="2">
+                    <a href="pages/contact.html" title="Contact"><img src="images/icon_mail.png"/></a>
+                </td>
+                <td>
+                    <h1><a href="pages/contact.html" title="Contact">Contact Me Now!</a></h1>
+                </td>
+            </tr>
+            <tr>
+                <td><p>or email <a href="mailto:christina.shadbolt@gmail.com?subject=Proofreading" title="mailto">christina.shadbolt@gmail.com</a></p></td>
+            </tr>
+        </table>
+        
+        <hr/>
+    </div>
+    
+    
+    <!-- background hero image -->
+    <div id="hero-image">
+        <img src="images/bg_mountains.jpg" alt="From Rough to Brilliant" title="From Rough to Brilliant"/>
+        <p class="rough">From Rough</p>
+        <p class="fancy">To Brilliant</p>
+    </div>
+    
+    
     <!-- main section -->
     <section>
         <div class="heading h1">
-            <div class="text"><h1>Contact</h1></div>
+            <div class="text"><h1>Welcome</h1></div>
             <div class="polygon">
                 <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon points="0,0 20,0 25,50 20,100 0,100" />
@@ -95,31 +131,54 @@
                 </svg>
             </div>
         </div>
+
+        <p>Kiwi Proofreader has the quality, excellence and ability to see all those little punctuation, spelling, grammar, and word usage mistakes, and the drive to fix them.  From business letters to essays, and articles to website content, Kiwi Proofreader can make those words work for you.</p>
         
-        <!-- contact form -->
-        <h2>Warning! debug mode</h2>
-        <form method="POST" action="http://formspree.io/elijah.shadbolt@gmail.com">
-            <label>Name</label>
-            <input type="text" name="firstname" placeholder="First name" required/>
-            <input type="text" name="lastname" placeholder="Last name" required/>
-            
-            <label>Email address</label>
-            <input type="email" name="email" placeholder="Your email address" required/>
-            
-            <label>Comment / Request</label>
-            <textarea name="message" placeholder="Your message" required></textarea>
-            
-            <button type="submit" title="Send to christina.shadbolt@gmail.com  via formspree.io">Send</button>
-        </form>
+        <div class="heading h2">
+            <div class="text"><h2>Who is Kiwi Proofreader?</h2></div>
+            <div class="polygon">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <polygon points="25,0 30,50 25,100 75,100 70,50 75,0" />
+                    
+                    <polygon class="small" points="5,0 10,50 5,100 95,100 90,50 95,0" />
+                </svg>
+            </div>
+        </div>
+
+        <p>Hi! I'm Christina Shadbolt, a home educating mother who has an excellent eye for quality English writing and a desire to improve on it wherever possible.  I have a natural ability to notice all written errors, along with a compulsion to fix them quickly.</p>
         
-        <p>Or if you prefer, you can use your own mailing system to email me at <a href="mailto:christina.shadbolt@gmail.com?subject=Proofreading"  title="mailto">christina.shadbolt@gmail.com</a>.</p>
+        <p>Word documents are thoroughly checked and double checked before being returned to the author.  Two copies are returned, one showing all changes made, and one with all the improvements in place, ready for submitting or printing out immediately.</p>
+        
+        <p>Simply send your document for proofreading to <a href="mailto:christina.shadbolt@gmail.com?subject=Proofreading"  title="mailto">christina.shadbolt@gmail.com</a>.  Please read the blog posts in News and Views if you have any questions - most of the frequently asked questions are answered there.</p>
     </section>
+    
+    
+    <!-- 'Contact me Now!' banner -->
+    <div class="banner">
+        <hr/>
+        
+        <table>
+            <tr>
+                <td class="icon" rowspan="2">
+                    <a href="pages/contact.html" title="Contact"><img src="images/icon_mail.png"/></a>
+                </td>
+                <td>
+                    <h1><a href="pages/contact.html" title="Contact">Contact Me Now!</a></h1>
+                </td>
+            </tr>
+            <tr>
+                <td><p>or email <a href="mailto:christina.shadbolt@gmail.com?subject=Proofreading" title="mailto">christina.shadbolt@gmail.com</a></p></td>
+            </tr>
+        </table>
+        
+        <hr/>
+    </div>
     
     
     <footer>
         <!-- footer navigation bar -->
         <nav>
-            <div><a href="index.html" title="Home">
+            <div><a href="pages/index.html" title="Home">
                 <div class="polygon">
                     <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                         <polygon points="2,102 98,102 98,25 50,2 2,25"/>
@@ -128,7 +187,7 @@
                 <div class="text">HOME</div>
             </a></div>
             
-            <div><a href="pricing.html" title="Pricing">
+            <div><a href="pages/pricing.html" title="Pricing">
                 <div class="polygon">
                     <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                         <polygon points="2,102 98,102 98,25 50,2 2,25"/>
@@ -137,7 +196,7 @@
                 <div class="text">PRICING</div>
             </a></div>
             
-            <div><a href="contact.html" title="Contact">
+            <div><a href="pages/contact.html" title="Contact">
                 <div class="polygon">
                     <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                         <polygon points="2,102 98,102 98,25 50,2 2,25"/>
@@ -146,7 +205,7 @@
                 <div class="text">CONTACT</div>
             </a></div>
             
-            <div><a href="blog/blog.html" title="Blog">
+            <div><a href="pages/blog.html" title="Blog">
                 <div class="polygon">
                     <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                         <polygon points="2,102 98,102 98,25 50,2 2,25"/>
@@ -159,12 +218,18 @@
             <!-- social site links -->
             <div class="icon"><a href="http://example.facebook.com" title="Facebook">
                 <div class="polygon">
+                    <!--<svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <polygon points="2,102 98,102 98,25 50,2 2,25"/>
+                    </svg>-->
                 </div>
                 <img class="icon" src="images/icon_facebook.png"/>
             </a></div>
             
             <div class="icon"><a href="http://example.linkedin.com" title="LinkedIn">
                 <div class="polygon">
+                    <!--<svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <polygon points="2,102 98,102 98,25 50,2 2,25"/>
+                    </svg>-->
                 </div>
                 <img class="icon" src="images/icon_linkedin.png"/>
             </a></div>

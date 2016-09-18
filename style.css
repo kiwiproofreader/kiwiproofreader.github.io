@@ -609,16 +609,6 @@ article h3 span#date {
 
 /* Enlarged Screen Sizes */
 
-/* high dpi screens */
-
-@media
-    only screen and (min-resolution: 120dpi) and (min-width: 820px),
-    only screen and (-webkit-min-device-pixel-ratio: 1.3) and (min-width: 820px),
-    only screen and (-o-min-device-pixel-ratio: 13/10) and (min-width: 820px)
-{
-    meta[name="viewport"]
-}
-
 /* very small */
 @media only screen and (min-width: 410px) {
     

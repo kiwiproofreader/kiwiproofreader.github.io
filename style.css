@@ -4,7 +4,7 @@
 /* Fonts */
 
 body,
-form { font-family: Verdana, "Open Sans", Calibri, sans-serif; }
+form * { font-family: Verdana, "Open Sans", Calibri, sans-serif; }
 
 h1 { font-family: "Segoe WP", "Segoe UI Semilight", "Segoe UI", "Open Sans", Tahoma, sans-serif; }
 
@@ -75,22 +75,28 @@ svg {
 /* forms */
 form * {
     display: block;
-    margin: 10px 0;
+    margin: 5px 0;
+    font-size: 100%;
+}
+form label,
+form button {
+    margin: 15px 0 5px 0;
+}
+form label {
     font-size: 90%;
 }
-label {
-    margin-bottom: 2px;
-}
-input, textarea {
+
+form input,
+form textarea {
     margin-top: 2px;
     width: 100%;
 }
-textarea {
+form textarea {
     resize: vertical;
 }
 
-/* hide spambot input so only spambots can see it */
-input[name="_gotcha"] {
+/* spambot protection - hide this input so only spambots can see it */
+form input[name="_gotcha"] {
     display: none;
 }
 

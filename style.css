@@ -1,3 +1,18 @@
+/* backup fonts */
+@import 'https://fonts.googleapis.com/css?family=Dancing+Script|Open+Sans|Shadows+Into+Light';
+
+/* Fonts */
+
+body,
+form { font-family: Verdana, "Open Sans", Calibri, sans-serif; }
+
+h1 { font-family: "Segoe WP", "Segoe UI Semilight", "Segoe UI", "Open Sans", Tahoma, sans-serif; }
+
+h2,
+h3,
+nav a,
+article span#date { font-family: "Segoe UI", "Nirmala UI", "Open Sans", sans-serif; }
+
 /* General */
 
 html,
@@ -14,24 +29,21 @@ body {
     
     background-color: #FFFFFF;
     color: #000000;
-    font-family: Verdana, Calibri, sans-serif;
+    /*body*/
     font-size: 11pt;
 }
 
 h1 {
-    font-family: "Segoe WP", "Segoe UI Semilight", "Segoe UI", Tahoma, sans-serif;
     color: #002D70;
     font-size: 24pt;
 }
 
 h2 {
-    font-family: "Segoe UI", "Nirmala UI", sans-serif;
     color: #114786;
     font-size: 18pt;
 }
 
 h3 {
-    font-family: "Segoe UI", "Nirmala UI", sans-serif;
     color: #114786;
     font-size: 14pt;
 }
@@ -65,7 +77,6 @@ form * {
     display: block;
     margin: 10px 0;
     font-size: 90%;
-    font-family: Verdana, Calibri, sans-serif;
 }
 label {
     margin-bottom: 2px;
@@ -181,13 +192,13 @@ input[name="_gotcha"] {
 #hero-image .rough {
     left: 5%;
     
-    font-family: "Freestyle Script", cursive;
+    font-family: "Freestyle Script", "Shadows Into Light", cursive;
 }
 #hero-image .fancy {
     right: 5%;
     top: 56px; /* small-screen default */
     
-    font-family: "Edwardian Script ITC", serif;
+    font-family: "Edwardian Script ITC", "Dancing Script", serif;
 }
 
 
@@ -340,7 +351,6 @@ footer nav>div:not(.icon) {
 
 nav a {
     color: #114786;
-    font-family: "Segoe UI", "Nirmala UI", sans-serif;
     font-size: 18pt;
     
     transition: color 0.3s, font-size 0.2s;
@@ -598,7 +608,6 @@ article span#date {
     font-size: 1em;
     font-weight: normal;
     float: right;
-    font-family: "Segoe UI", "Nirmala UI", sans-serif;
 }
 article h2 span#date {
     margin-top: 2px;

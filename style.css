@@ -482,7 +482,7 @@ section>* {
 
 section p,
 section li {
-    text-align: justify;
+    text-align: left; /* small-screen default */
 }
 section a:visited {
     color: #550077;
@@ -607,6 +607,8 @@ article h3 span#date {
     margin-top: 0px;
 }
 
+
+
 /* Enlarged Screen Sizes */
 
 /* very small */
@@ -638,6 +640,12 @@ article h3 span#date {
     }
     #title div.polygon {
         left: -15px;
+    }
+
+    /* section */
+    section p,
+    section li {
+        text-align: justify;
     }
 }
 

@@ -6,10 +6,11 @@
 body,
 form * { font-family: Verdana, "Open Sans", Calibri, sans-serif; }
 
-h1 { font-family: "Segoe WP", "Segoe UI Semilight", "Segoe UI", "Open Sans", Tahoma, sans-serif; }
+h1,
+h2 { font-family: "Segoe WP", "Segoe UI Semilight", "Segoe UI", "Open Sans", Tahoma, sans-serif; }
 
-h2,
 h3,
+h4,
 nav a,
 article span#date { font-family: "Segoe UI", "Nirmala UI", "Open Sans", sans-serif; }
 
@@ -33,17 +34,18 @@ body {
     font-size: 11pt;
 }
 
-h1 {
+h1,
+h2 {
     color: #002D70;
     font-size: 24pt;
 }
 
-h2 {
+h3 {
     color: #114786;
     font-size: 18pt;
 }
 
-h3 {
+h4 {
     color: #114786;
     font-size: 14pt;
 }
@@ -130,8 +132,8 @@ form input[name="_gotcha"] {
     display: none; /* small-screen default */
 }
 
-/* h1, p, img */
-.banner h1,
+/* h2, p, img */
+.banner h2,
 .banner p {
     text-align: center; /* small-screen default */
 }
@@ -143,19 +145,25 @@ form input[name="_gotcha"] {
     color: #9BD5FF;
 }
 
-.banner h1 a {
+.banner h2 {
     color: #FFFFFF;
-    transition-property: color;
-    transition-duration: 0.3s;
 }
-.banner h1 a:hover {
+.banner h2 a {
+    color: #FFFFFF;
+    
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
+}
+.banner h2 a:hover {
     color: #9BD5FF;
     text-decoration: none;
 }
 
 .banner img {
-    transition-property: filter, -webkit-filter;
-    transition-duration: 0.3s;
+    transition: filter 0.3s, -webkit-filter 0.3s;
+    -webkit-transition: -webkit-filter 0.3s;
 }
 .banner img:hover {
     -webkit-filter: brightness(120%);
@@ -181,7 +189,12 @@ form input[name="_gotcha"] {
     position: relative;
     top: 50%;
     left: 50%;
+    
     transform: translate(-50%, -40%);
+    -webkit-transform: translate(-50%, -40%);
+    -ms-transform: translate(-50%, -40%);
+    -moz-transform: translate(-50%, -40%);
+    -o-transform: translate(-50%, -40%);
     
     width: 1024px;
     min-width: 100%;
@@ -210,7 +223,9 @@ form input[name="_gotcha"] {
 
 /* Header and Footer */
 
-header, footer {
+header,
+footer,
+section nav {
     height: 60px;
     background-color: #FFE8DE;
     
@@ -241,6 +256,7 @@ header div.overlay {
 footer {
     /* if content is smaller than viewport, expand footer to bottom of page */
     box-shadow: 0px 500px 0px 500px #FFE8DE;
+    margin-bottom: 0;
 }
 
 
@@ -260,6 +276,9 @@ footer {
     width: 380px;
     
     transition: left 0.3s;
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    -o-transition: left 0.3s;
 }
 
 #title polygon {
@@ -276,16 +295,25 @@ footer {
     height: 44px;
     
     background: #9BD5FF;
+    
     transition: left 0.3s;
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    -o-transition: left 0.3s;
 }
 #title div.icon img {
     position: relative;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
     
-    transition-property: filter, -webkit-filter;
-    transition-duration: 0.3s;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    
+    transition: filter 0.3s, -webkit-filter 0.3s;
+    -webkit-transition: -webkit-filter 0.3s;
 }
 #title div.icon:hover img {
     filter: brightness(150%);
@@ -299,11 +327,22 @@ footer {
     top: 0;
     left: 65px;
     width: 300px;
+    
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     
     color: #002D70;
     transition-property: color, opacity, left;
     transition-duration: 0.5s;
+    -webkit-transition-property: color, opacity, left;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-property: color, opacity, left;
+    -moz-transition-duration: 0.5s;
+    -o-transition-property: color, opacity, left;
+    -o-transition-duration: 0.5s;
 }
 #title h1:hover {
     color: #0071BC;
@@ -325,6 +364,9 @@ header nav {
     border-bottom: 2px solid rgb(150,150,150); /* small-screen default */
 
     transition: bottom 0.3s, margin-left 0.3s;
+    -webkit-transition: bottom 0.3s, margin-left 0.3s;
+    -moz-transition: bottom 0.3s, margin-left 0.3s;
+    -o-transition: bottom 0.3s, margin-left 0.3s;
 }
 footer nav {
     bottom: 0;
@@ -339,17 +381,17 @@ nav>div {
     float: left;
     
     height: 100%;
-    overflow: none;
+    overflow: hidden;
 }
 header nav>div {
     width: 100%; /* small-screen default */
 }
 footer nav>div {
     bottom: 0;
-    width: 20%;
+    width: 19%;
 }
 footer nav>div.icon {
-    width: 50%;
+    width: 33%;
 }
 footer nav>div:not(.icon) {
     display: none; /* remove normal page links because header is fixed */
@@ -360,6 +402,9 @@ nav a {
     font-size: 18pt;
     
     transition: color 0.3s, font-size 0.2s;
+    -webkit-transition: color 0.3s, font-size 0.2s;
+    -moz-transition: color 0.3s, font-size 0.2s;
+    -o-transition: color 0.3s, font-size 0.2s;
 }
 nav a:hover {
     color: #0071BC;
@@ -372,8 +417,17 @@ nav a:hover {
 nav div.text {
     position: absolute;
     left: 50%;
+    
     transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    
     transition: top 0.1s;
+    -webkit-transition: top 0.1s;
+    -moz-transition: top 0.1s;
+    -o-transition: top 0.1s;
 }
 header nav div.text {
     top: 5px; /* small screen default */
@@ -398,7 +452,10 @@ nav polygon {
     stroke-width: 2;
     fill-rule: nonzero;
     
-    transition: fill 0.3s;
+    transition: fill 0.3s;    
+    -webkit-transition: fill 0.3s;    
+    -moz-transition: fill 0.3s;    
+    -o-transition: fill 0.3s;
 }
 header nav polygon {
     visibility: hidden; /* small-screen default */
@@ -421,10 +478,15 @@ nav div.icon img {
     position: absolute;
     bottom: 8px;
     left: 50%;
-    transform: translateX(-50%);
     
-    transition-property: filter, -webkit-filter;
-    transition-duration: 0.3s;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    
+    transition: filter 0.3s, -webkit-filter 0.3s;
+    -webkit-transition: -webkit-filter 0.3s;
 }
 nav div.icon:hover img {
     filter: brightness(150%);
@@ -454,8 +516,8 @@ nav div.icon:hover img {
     width: 100%;
     height: 100%;
     
-    transition-property: filter, -webkit-filter;
-    transition-duration: 0.3s;
+    transition: filter 0.3s, -webkit-filter 0.3s;
+    -webkit-transition: -webkit-filter 0.3s;
 }
 #menu-button ~ label img:hover {
     -webkit-filter: brightness(150%);
@@ -484,27 +546,40 @@ section {
     width: 100%;
 }
 
-section polygon.small {
-    visibility: hidden;
-}
-
 /* centering section content */
 section>* {
     width: 90%; /* small-screen default */
     margin: 18px auto;
     
     transition: width 0.3s;
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -o-transition: width 0.3s;
 }
 
 section p,
 section li {
     text-align: left; /* small-screen default */
 }
+section h1,
+section h2,
+section h3,
+section h4 {
+    text-align: center;
+}
 section a:visited {
     color: #550077;
 }
 
-/* headings */
+section img {
+    display: block;
+    margin: auto;
+    
+    border: 2px solid #0071BC;
+    border-radius: 10px;
+}
+
+/* section headings */
 
 .heading {
     width: 100%;
@@ -517,8 +592,8 @@ section a:visited {
     width: 78%; /* small-screen default */
     margin: auto;
 }
-.heading h1,
-.heading h2 {
+.heading h2,
+.heading h3 {
     text-align: center;
     margin: 10px 0;
 }
@@ -543,16 +618,24 @@ section polygon.small {
     visibility: visible; /* small-screen default */
 }
 
-section img {
-    display: block;
-    margin: auto;
+/* social icons */
+section nav {
+    padding: 0 5px;
+    width: 180px;
     
-    border: 2px solid #0071BC;
-    border-radius: 10px;
+    border-radius: 15px;
+}
+section nav div.icon {
+    width: 33%;
+    margin-top: -3px;
+}
+section nav img {
+    border: none;
+    border-radius: 0;
 }
 
 
-/* article (for blog) */
+/* articles (for blog) */
 
 section>article {
     padding: 10px 15px 5px 15px;
@@ -569,6 +652,13 @@ section>article article {
     border-top: 1px solid white;
     margin: 20px 0;
     padding: 0;
+}
+
+article h1,
+article h2,
+article h3,
+article h4 {
+    text-align: left;
 }
 
 article.large-font p,
@@ -593,32 +683,32 @@ article hr {
     border-bottom: 1px solid white;
 }
 
-/* headings */
+/* article headings */
 
-article h1 {
+article h2 {
     margin: 0;
     font-size: 1.5em;
 }
-article h2 {
+article h3 {
     margin: 10px 0 0 0;
     font-size: 1.2em;
 }
-article h3 {
+article h4 {
     margin: 10px 0 -10px 0;
     font-size: 1em;
 }
 
-article span#date {
+article time {
     display: inline-block;
     margin-top: 3px;
     font-size: 1em;
     font-weight: normal;
     float: right;
 }
-article h2 span#date {
+article h2 time {
     margin-top: 2px;
 }
-article h3 span#date {
+article h3 time {
     margin-top: 0px;
 }
 
@@ -635,7 +725,7 @@ article h3 span#date {
         display: table-cell;
     }
     
-    .banner h1,
+    .banner h2,
     .banner p {
         text-align: left;
     }
@@ -686,7 +776,8 @@ article h3 span#date {
     }
     
     header nav {
-        left: auto; right: auto; width: auto;
+        left: 0; right: 0;
+        width: auto;
         margin-left: 105px;
         
         border-bottom: 0;
@@ -740,7 +831,7 @@ article h3 span#date {
         display: block;
     }
     footer nav>div.icon {
-        width: 10%;
+        width: 8%;
     }
     
     /* header */

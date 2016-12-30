@@ -399,6 +399,7 @@ footer nav>div.icon {
     width: 33%;
 }
 footer nav>div:not(.icon) {
+    visibility: hidden;
     display: none; /* remove normal page links because header is fixed */
 }
 
@@ -719,6 +720,10 @@ article h3 time {
     margin-top: 0px;
 }
 
+iframe.fullHeight {
+	width: 100%;
+	height: 90vh;
+}
 
 
 /* Enlarged Screen Sizes */
@@ -835,6 +840,7 @@ article h3 time {
     }
     
     footer nav>div:not(.icon) {
+        visibility: visible;
         display: block;
     }
     footer nav>div.icon {
